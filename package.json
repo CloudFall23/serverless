@@ -1,0 +1,19 @@
+{
+  "name": "serverless",
+  "version": "1.0.0",
+  "description": "Code for Lambda functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Siddharth",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^7.6.0",
+    "aws-sdk": "^2.1502.0",
+    "express": "^4.18.2",
+    "https": "^1.0.0",
+    "mailgun-js": "^0.22.0",
+    "node-fetch": "^2.3.2"
+  }
+}

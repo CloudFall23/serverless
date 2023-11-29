@@ -165,8 +165,8 @@ exports.handler = async (event, context) => {
           const emailData = {
             from: 'csye6225@demos.siddharthgargava.me',
             to:  recEmail,
-            subject: 'Download Failed',
-            text: 'Your file failed to upload to S3'
+            subject: 'File Upload Failed',
+            text: 'Your file failed to upload to GCS. Error: Incorrect url zip path'
           };
         await sendEmail(mailgun, emailData);
         return 'File not uploaded';
@@ -181,8 +181,8 @@ exports.handler = async (event, context) => {
       const emailData = {
           from: 'csye6225@demos.siddharthgargava.me',
           to: recEmail,
-          subject: 'File Uploaded Notification',
-          text: 'Your file has been uploaded to GCS successfully. Link: ' + signedurl,
+          subject: 'File Uploaded Successfully Notification',
+          text: 'Your file has been uploaded to GCS successfully. Filepath: ' + fileName,
       };
       console.log("Sending Email");
       await sendEmail(mailgun, emailData);
@@ -194,8 +194,8 @@ exports.handler = async (event, context) => {
       const emailData = {
         from: 'csye6225@demos.siddharthgargava.me',
         to: recEmail,
-        subject: 'Download Failed',
-        text: 'Your file failed to upload to S3'
+        subject: 'File Upload Failed',
+        text: 'Your file failed to upload to GCS. Error: Incorrect url zip path'
       };
       await sendEmail(mailgun, emailData);
       throw error;

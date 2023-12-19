@@ -14,9 +14,9 @@ This Node.js script is designed to be deployed as an AWS Lambda function. It res
 
 - Node.js environment
 - AWS SDK (for DynamoDB and SNS)
-- Google Cloud Storage SDK (@google-cloud/storage)
-- node-fetch for handling HTTP requests
-- mailgun-js for sending emails
+- Google Cloud Storage SDK `@google-cloud/storage`
+- `node-fetch` for handling HTTP requests
+- `mailgun-js` for sending emails
 
 ## Environment Variables
 
@@ -46,7 +46,7 @@ The function includes error handling to catch and log any issues during the proc
 
 To deploy this script:
 
-1. Package the script along with node_modules.
+1. Package the script along with `node_modules`.
 2. Create a new AWS Lambda function and upload the package.
 3. Set the required environment variables in the Lambda configuration.
 4. Configure an SNS topic to trigger the Lambda function.
